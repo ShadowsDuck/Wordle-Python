@@ -14,12 +14,13 @@ while wantsToPlay:
             continue
         else:
             word(guess_word, correct_word)
-            
             if guess_word == correct_word:
-                print_won_msg(correct_word)
+                print_won_msg()
                 hasWon = True
             else:
                 round_num += 1   
     if not hasWon:
-       print_lose_msg(correct_word)
-       exit()
+        print_lose_msg(correct_word)
+        exit()
+    else:
+        wantsToPlay = False
